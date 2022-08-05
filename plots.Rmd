@@ -46,8 +46,8 @@ ggplot(df, aes(x = Year, y = World)) +  # Plot with values on top
 
 plot2 <- ggplot(df, aes(x = Year, y = World)) +  # Plot with values on top
   geom_bar(stat = "identity", fill= "#800026") + coord_flip() +
-  geom_text(aes(label = clabel), size=5,
-            vjust = -5, colour = "#fed976") +
+  geom_text(aes(label = clabel), size=5, hjust = 2,
+            vjust = -0.5, colour = "#fed976") +
   scale_x_discrete(labels = Year) + 
   theme_minimal() + 
   ylab("Webometrics Ranking") + 
